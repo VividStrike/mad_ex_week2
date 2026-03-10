@@ -45,7 +45,12 @@
  */
 
 function accountGenerator(accountName, initBalance) {
-  // Your implementation here
+  let balance = initBalance; // private variable
+
+  return function(amount) {
+    balance += amount; // update balance
+    return `You deposited ${amount} to your ${accountName} Account and the current balance is ${balance}.`;
+  };
 }
 
 /**
@@ -68,7 +73,7 @@ function accountGenerator(accountName, initBalance) {
  */
 
 function distributeTips(...args) {
-  // Your implementation here
+  
 }
 
 /**
